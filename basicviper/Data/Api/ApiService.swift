@@ -14,7 +14,7 @@ protocol IApiService {
     func getPost(id:Int,completion:@escaping (Result<PostsEntity,Error>)->Void)
 }
 
-class ApiService {
+class ApiService:IApiService {
     
     private var serviceUrl:String = "https://jsonplaceholder.typicode.com/"
     
