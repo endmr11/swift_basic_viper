@@ -8,6 +8,12 @@
 import Foundation
 
 
+protocol IApiService {
+
+    func getAllPosts(completion:@escaping (Result<[PostsEntity],Error>)->Void)
+    func getPost(id:Int,completion:@escaping (Result<PostsEntity,Error>)->Void)
+}
+
 class ApiService {
     
     private var serviceUrl:String = "https://jsonplaceholder.typicode.com/"
